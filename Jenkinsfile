@@ -9,11 +9,6 @@ node{
             sh 'mvn compile'
         }
     }
-    stage('AB Review'){
-        withMaven(maven:'my maven'){
-            sh 'mvn pmd:pmd'
-        }
-    }
     stage('AB Package'){
         withMaven(maven:'my maven'){
             sh 'mvn package'
