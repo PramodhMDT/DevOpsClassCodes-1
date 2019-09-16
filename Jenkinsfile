@@ -4,11 +4,6 @@ node{
     stage('git checkout'){
         git 'https://github.com/GaneshBabu2021/DevOpsClassCodes.git'
     }
-    stage('AB Compile'){
-        withMaven(maven:'my maven'){
-            sh 'mvn compile'
-        }
-    }
     stage('AB Package'){
         withMaven(maven:'my maven'){
             sh 'mvn package'
