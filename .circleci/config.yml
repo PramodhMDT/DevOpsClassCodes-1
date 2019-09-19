@@ -41,7 +41,8 @@ jobs: # a collection of steps
       
       - store_artifacts: # store the uberjar as an artifact
       # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
-          path: target/
+          path: target/com.edurekademo.tutorial.addressbook.war
+      - run: touch favicon.ico
   deploy_stage:
     executor: heroku/default
     steps:
